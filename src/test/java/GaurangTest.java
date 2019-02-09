@@ -36,7 +36,7 @@ public class GaurangTest {
 
 
         /**declaring 'By' objects*/
-        By searchInputField = By.id("#search_query_top");
+        By searchInputField = By.id("search_query_top");
         By searchButton = By.cssSelector("button.btn.btn-default.button-search");
         By pageHeading = By.cssSelector("h1.page-heading");
 
@@ -47,7 +47,7 @@ public class GaurangTest {
         WebDriver driver = new ChromeDriver();
 
         //open a url
-        driver.get("http://www.google.com");
+        driver.get("http://www.automationpractice.com");
 
         //maximize a window
         driver.manage().window().maximize();
