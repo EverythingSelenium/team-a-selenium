@@ -32,9 +32,6 @@ public class GaurangTest {
          *
          * */
 
-
-
-
         /**declaring 'By' objects*/
         By searchInputField = By.id("search_query_top");
         By searchButton = By.cssSelector("button.btn.btn-default.button-search");
