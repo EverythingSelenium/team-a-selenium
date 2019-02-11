@@ -5,11 +5,11 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup(){
-
+        BasePage.setup();
     }
 
     @AfterMethod
     public void teardown(){
-
+        BasePage.teardown();
     }
 }
