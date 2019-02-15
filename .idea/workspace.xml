@@ -4,6 +4,12 @@
     <list default="true" id="b1c6cde3-476d-435f-84ae-2fb12d31738d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GaurangTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GaurangTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PrachiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PrachiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TinuClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TinuClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TulsiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TulsiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VedantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VedantTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VrutaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VrutaTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/GaurangTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ContactUsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="292">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,7 +145,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550263371617" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550264434129" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -339,8 +345,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GaurangTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        <state relative-caret-position="1054">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -349,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ContactUsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="292">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
