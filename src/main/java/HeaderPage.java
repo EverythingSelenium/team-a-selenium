@@ -1,8 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class VedantHeaderPage extends BasePage{
+public class HeaderPage extends BasePage{
 
+    //Locators
     By searchInputField = By.cssSelector("#search_query_top");
     By searchButton = By.cssSelector("button.btn.btn-default.button-search");
 

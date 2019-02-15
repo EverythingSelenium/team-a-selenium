@@ -43,8 +43,8 @@ public class GaurangTest extends BaseTest {
 
     @Test
     public void tc001_verifyLoginPage() {
-        VedantHeaderPage vhp = new VedantHeaderPage();
-        GaurangSearchPage gsp = new GaurangSearchPage();
+        HeaderPage vhp = new HeaderPage();
+        SearchPage gsp = new SearchPage();
 
         String searchText = "dresses";
         String expectedText = "\"DRESSES\"";
