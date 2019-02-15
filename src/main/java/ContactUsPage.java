@@ -6,11 +6,10 @@ public class ContactUsPage extends BasePage {
 
     // locators
     By subjectHeadingSelect = By.cssSelector("#id_contact");
-    By EmailAddressSelect = By.id("email");
-    By OrderReferencsSelect = By.id("id_order");
-    By AttachFileSelect = By.cssSelector("#id_order");
-    By MessageSelect = By.id("message");
-    By SendSelect = By.cssSelector("#submitMessage > span");
+    By emailAddressInput = By.id("email");
+    By orderReferencsInput = By.id("id_order");
+    By messageInput = By.id("message");
+    By sendButton = By.cssSelector("#submitMessage > span");
 
 
 

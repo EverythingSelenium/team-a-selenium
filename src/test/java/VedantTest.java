@@ -1,4 +1,4 @@
-public class VedantTest {
+public class VedantTest extends BaseTest{
 
     
 }
