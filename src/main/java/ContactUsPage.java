@@ -9,7 +9,6 @@ public class ContactUsPage extends BasePage {
     By emailAddressinput = By.id("email");
     By orderReferencsinput = By.id("id_order");
     By messageinput = By.id("message");
-    By sendSelect = By.cssSelector("#submitMessage > span");
     By sendButton = By.cssSelector("#submitMessage > span");
 
 
