@@ -1,3 +1,2 @@
-public class PoonamTest {
-
+public class PoonamTest extends BaseTest {
 }
