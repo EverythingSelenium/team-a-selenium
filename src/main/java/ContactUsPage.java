@@ -6,14 +6,25 @@ public class ContactUsPage extends BasePage {
 
     // locators
     By subjectHeadingSelect = By.cssSelector("#id_contact");
+    By emailAddressinput = By.id("email");
+    By orderReferencsinput = By.id("id_order");
 
 
     //methods
-    public void selectSubjectHeading(int option){
+    public void selectSubjectHeading(int option) {
         WebElement element = driver.findElement(subjectHeadingSelect);
         Select select = new Select(element);
         select.selectByIndex(option);
+    }
 
+    public String emailAddressinput(String email) {
+        WebElement emailAddressElement = driver.findElement(emailAddressinput);
+        return email;
+    }
+
+    public String orderReferencsinput(String order) {
+        WebElement orderReferencsElement = driver.findElement(orderreferenceinput);
+        return order;
     }
 
 }
