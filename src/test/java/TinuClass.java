@@ -1,2 +1,2 @@
-public class TinuClass {
+public class TinuClass extends BaseTest{
 }
