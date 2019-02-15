@@ -6,6 +6,7 @@ public class HeaderPage extends BasePage{
     //Locators
     By searchInputField = By.cssSelector("#search_query_top");
     By searchButton = By.cssSelector("button.btn.btn-default.button-search");
+    By contactUsLink = By.cssSelector("#contact-link");
 
 
 
@@ -19,6 +20,11 @@ public class HeaderPage extends BasePage{
     public void clickOnSearchButton(){
         WebElement searchButtonElement = driver.findElement(searchButton);
         searchButtonElement.click();
+    }
+
+    public void clickOnContactUsLink(){
+        WebElement element = driver.findElement(contactUsLink);
+        
     }
 
 
