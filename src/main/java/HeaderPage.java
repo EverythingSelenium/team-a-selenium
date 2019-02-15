@@ -23,8 +23,8 @@ public class HeaderPage extends BasePage{
     }
 
     public void clickOnContactUsLink(){
-        WebElement element = driver.findElement(contactUsLink);
-        
+        WebElement contactUsLinkElement = driver.findElement(this.contactUsLink);
+        contactUsLinkElement.click();
     }
 
 
