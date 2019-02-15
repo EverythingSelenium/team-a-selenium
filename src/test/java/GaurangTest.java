@@ -46,13 +46,14 @@ public class GaurangTest {
         //Instantiate driver
         WebDriver driver = new ChromeDriver();
 
-        //open a url
+        //open the brwoser and navigate the page
         driver.get("http://www.automationpractice.com");
 
         //maximize a window
         driver.manage().window().maximize();
 
         //find an element on the DOM
+
         WebElement searchInputElement = driver.findElement(searchInputField);
         //click on an element
         searchInputElement.sendKeys("dresses");
