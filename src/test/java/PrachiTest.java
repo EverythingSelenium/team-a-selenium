@@ -1,2 +1,2 @@
-public class PrachiTest {
+public class PrachiTest extends BaseTest{
 }

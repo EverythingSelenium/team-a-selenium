@@ -8,6 +8,8 @@ public class ContactUsPage extends BasePage {
     By subjectHeadingSelect = By.cssSelector("#id_contact");
     By emailAddressinput = By.id("email");
     By orderReferencsinput = By.id("id_order");
+    By messageinput = By.id("message");
+    By sendButton = By.cssSelector("#submitMessage > span");
 
 
     //methods
