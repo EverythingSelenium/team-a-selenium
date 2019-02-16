@@ -19,14 +19,14 @@ public class ContactUsPage extends BasePage {
         select.selectByIndex(option);
     }
 
-    public WebElement emailAddressInputValue(String email) {
+    public void enterEmailAddressInputField(String email) {
         WebElement emailAddressElement = driver.findElement(emailAddressinput);
-        return emailAddressElement;
+        emailAddressElement.sendKeys(email);
     }
 
-    public WebElement orderReferenceInputValue(String order) {
+    public void enterOrderReferenceInputField(String order) {
         WebElement orderReferencsElement = driver.findElement(orderReferenceinput);
-        return orderReferenceElement;
+        orderReferencsElement.sendKeys(order);
     }
 
 }
