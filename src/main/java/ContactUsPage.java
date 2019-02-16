@@ -6,12 +6,12 @@ public class ContactUsPage extends BasePage {
 
     // locators
     By subjectHeadingSelect = By.cssSelector("#id_contact");
-    By emailAddressinput = By.id("email");
-    By orderReferenceinput = By.id("id_order");
+    By emailAddressInput = By.id("email");
+    By orderReferenceInput = By.id("id_order");
     By messageinput = By.id("message");
     By sendButton = By.cssSelector("#submitMessage > span");
 
-
+    //create conflict
     //methods
     public void selectSubjectHeading(int option) {
         WebElement element = driver.findElement(subjectHeadingSelect);
@@ -20,12 +20,12 @@ public class ContactUsPage extends BasePage {
     }
 
     public void enterEmailAddressInputField(String email) {
-        WebElement emailAddressElement = driver.findElement(emailAddressinput);
+        WebElement emailAddressElement = driver.findElement(emailAddressInput);
         emailAddressElement.sendKeys(email);
     }
 
     public void enterOrderReferenceInputField(String order) {
-        WebElement orderReferencsElement = driver.findElement(orderReferenceinput);
+        WebElement orderReferencsElement = driver.findElement(orderReferenceInput);
         orderReferencsElement.sendKeys(order);
     }
 
