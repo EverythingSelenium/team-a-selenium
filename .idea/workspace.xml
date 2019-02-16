@@ -239,6 +239,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.GaurangTest" />
+      <item itemvalue="Application.TulsiFacebook_Login" />
+      <item itemvalue="Application.TulsiLogin" />
+      <item itemvalue="Application.Tulsi_LoginAccount" />
+      <item itemvalue="Application.Tulsi_Order_Reference" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Tulsi_Order_Reference" />
