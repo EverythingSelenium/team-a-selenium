@@ -1,4 +1,4 @@
-public class VrutaTest {
+public class VrutaTest extends BaseTest{
 
     
 }

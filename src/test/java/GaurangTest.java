@@ -61,5 +61,4 @@ public class GaurangTest extends BaseTest {
         Assert.assertEquals(actualResultText,expectedText.toUpperCase());
 
     }
-
 }
