@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b1c6cde3-476d-435f-84ae-2fb12d31738d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeaderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GaurangTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GaurangTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PoonamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PoonamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PrachiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PrachiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TinuClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TinuClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TulsiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TulsiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VedantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VedantTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VrutaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VrutaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team-a-selenium.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/GaurangTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TulsiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="417">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -149,7 +159,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="23" />
     <option name="width" value="782" />
     <option name="height" value="688" />
@@ -311,7 +321,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28441754" />
@@ -372,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GaurangTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -443,8 +453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TulsiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="417">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
