@@ -1,6 +1,7 @@
 import org.testng.annotations.Test;
 
-public class TulsiTest {
+public class TulsiTest extends BaseTest {
+
 
     @Test
     public void tc002_verify_A_User_Is_Able_To_Send_A_Message_Through_Contact_Us_Form(){
