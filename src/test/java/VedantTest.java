@@ -5,7 +5,6 @@ public class VedantTest extends BaseTest{
     @Test
     public void tc002_verify_A_User_Is_Able_To_Send_A_Message_Through_Contact_Us_Form(){
         //click on the contact us link
-        headerpage.
         //select a subject heading - (2) Webmaster
         //enter email address in email input field
         //enter order reference in order reference input field
