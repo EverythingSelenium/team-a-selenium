@@ -22,6 +22,8 @@ public class TulsiTest extends BaseTest {
         contactUsPage2.enterOrderReference("12345a");
         //enter a message in message input box
         contactUsPage2.enterMessageText("This is Test1");
+        //click on send button
+        contactUsPage2.clickOnSendButton();
         //verify the success message as "Your message has been successfully sent to our team."
         String actualMessage = contactUsPage2.getSuccessMessage();
         Assert.assertEquals(actualMessage,expectedMessage);
@@ -41,6 +43,8 @@ public class TulsiTest extends BaseTest {
         contactUsPage2.enterOrderReference("12345a");
         //enter a message in message input box
         contactUsPage2.enterMessageText("This is Test1");
+        //click on send button
+        contactUsPage2.clickOnSendButton();
         //verify the validation error message as "There is 1 error\n 1. Invalid email address."
          String actualErrormessage = contactUsPage2.getErrorMessage();
         Assert.assertEquals(actualErrormessage,expectedErrorMessage);
@@ -49,12 +53,14 @@ public class TulsiTest extends BaseTest {
 
     @Test
     public void tc004_verify_No_Of_Items_In_Search_Result(){
-        
+           String expectedResultMessage = "7 results have been found.";
         //enter text in search input
         headerPage2.enterTextInSearchBox("Dresses");
         //click on search button
         headerPage2.clickOnSearchButton();
         //verify the number of items returned as expected - 7
+        String actualResultmessage = searchpage2.getResultmessage();
+        Assert.assertEquals(actualResultmessage, expectedResultMessage);
 
 
     }

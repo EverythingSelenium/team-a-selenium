@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class HeaderPage extends BasePage{
+public class HeaderPage extends BasePage {
 
     //Locators
     By searchInputField = By.cssSelector("#search_query_top");
@@ -17,15 +17,25 @@ public class HeaderPage extends BasePage{
         searchInputElement.sendKeys(searchTex);
     }
 
-    public void clickOnSearchButton(){
+    public void clickOnSearchButton() {
         WebElement searchButtonElement = driver.findElement(searchButton);
         searchButtonElement.click();
     }
 
-    public void clickOnContactUsLink(){
+    public void clickOnContactUsLink() {
         WebElement contactUsLinkElement = driver.findElement(this.contactUsLink);
         contactUsLinkElement.click();
     }
 
 
-}
+
+
+    }
+
+
+
+
+
+
+
+
