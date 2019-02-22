@@ -49,5 +49,8 @@ public class ContactUsPage extends BasePage {
         WebElement errorMessageEle = driver.findElement(errorMessage);
         return errorMessageEle.getText();
     }
+    public String getMessageText(){
+       return driver.findElement(messageInput).getText();
+    }
 
 }
