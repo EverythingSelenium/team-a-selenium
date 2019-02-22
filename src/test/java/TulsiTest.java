@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 public class TulsiTest extends BaseTest {
 
          public HeaderPage headerPage2 = new HeaderPage();
-         public SearchPage searchpage2 = new SearchPage();
+         public SearchPage searchPage2 = new SearchPage();
          public ContactUsPage contactUsPage2 = new ContactUsPage();
 
     @Test
@@ -59,8 +59,8 @@ public class TulsiTest extends BaseTest {
         //click on search button
         headerPage2.clickOnSearchButton();
         //verify the number of items returned as expected - 7
-        String actualResultmessage = searchpage2.getResultmessage();
-        Assert.assertEquals(actualResultmessage, expectedResultMessage);
+        String actualResultMessage = searchPage2.getResultMessage();
+        Assert.assertEquals(actualResultMessage, expectedResultMessage);
 
 
     }

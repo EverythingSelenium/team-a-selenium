@@ -53,15 +53,15 @@ public class PrachiTest extends BaseTest{
 
     @Test
     public void tc004_verify_No_Of_Items_In_Search_Result(){
-        String expectedResultsMessage = "7 results have been found.";
+        String expectedResultMessage = "7 results have been found.";
 
         //enter text in search input
         headerPage.enterTextInSearchBox("Dresses");
         //click on search button
         headerPage.clickOnSearchButton();
         //verify the number of items returned as expected - 7
-        String actualResultsMessage = searchpage.getResultsMessage();
-        Assert.assertEquals(actualResultsMessage,expectedResultsMessage);
+        String actualResultMessage = searchpage.getResultMessage();
+        Assert.assertEquals(actualResultMessage,expectedResultMessage);
 
     }
 }
