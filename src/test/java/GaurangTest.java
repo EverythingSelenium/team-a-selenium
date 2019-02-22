@@ -99,7 +99,7 @@ public class GaurangTest extends BaseTest {
         //verify the validation error message as "There is 1 error\n 1. Invalid email address."
         String actualErrorMessage = contactUsPage.getErrorMessage();
         Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
-
+        //end of test
     }
 
     @Test
