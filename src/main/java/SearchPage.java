@@ -10,7 +10,7 @@ public class SearchPage extends BasePage {
         WebElement headerText = driver.findElement(resultText);
         return headerText.getText();
     }
-    public String getResultmessage() {
+    public String getResultMessage() {
         WebElement resultMessageElement = driver.findElement(getMessage);
         return resultMessageElement.getText();
     }
