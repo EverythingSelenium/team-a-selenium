@@ -1,3 +1,6 @@
+import automationpractice.ContactUsPage;
+import automationpractice.HeaderPage;
+import automationpractice.SearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -62,6 +65,13 @@ public class PrachiTest extends BaseTest{
         //verify the number of items returned as expected - 7
         String actualResultMessage = searchpage.getResultMessage();
         Assert.assertEquals(actualResultMessage,expectedResultMessage);
+
+
+        //make change
+        //verify change in github desktop
+        //git add --all
+        //git commit -m "commit message..."
+        //git push origin vruta-test
 
     }
 }
