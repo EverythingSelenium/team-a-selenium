@@ -9,7 +9,6 @@ public class HeaderPage extends BasePage {
     By contactUsLink = By.cssSelector("#contact-link");
 
 
-
     public void enterTextInSearchBox(String searchTex) {
         //find an element on the DOM
         WebElement searchInputElement = driver.findElement(searchInputField);
@@ -27,15 +26,4 @@ public class HeaderPage extends BasePage {
         contactUsLinkElement.click();
     }
 
-
-
-
-    }
-
-
-
-
-
-
-
-
+}
