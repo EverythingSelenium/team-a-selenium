@@ -1,3 +1,6 @@
+import automationpractice.ContactUsPage;
+import automationpractice.HeaderPage;
+import automationpractice.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

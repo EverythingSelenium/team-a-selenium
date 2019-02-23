@@ -1,4 +1,6 @@
-import org.openqa.selenium.By;
+import automationpractice.ContactUsPage;
+import automationpractice.HeaderPage;
+import automationpractice.SearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
