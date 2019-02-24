@@ -114,7 +114,7 @@ public class GaurangTest extends BaseTest {
     }
     
     @Test
-    public void arrayListTest(){
+     public void arrayListTest(){
         ArrayList<String> stringArrayList = new ArrayList<>();
         stringArrayList.add("Chicago");
         stringArrayList.add("Dallas");
