@@ -1,39 +1,38 @@
-import automation_practice.ContactUsPage;
-import automation_practice.HeaderPage;
-import automation_practice.SearchPage;
+package automation_practice;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class VrutaTest extends BaseTest{
+public class PoonamTest extends BaseTest {
 
-    private HeaderPage headerPage = new HeaderPage();
-    private SearchPage searchPage = new SearchPage();
-    private ContactUsPage contactUsPage = new ContactUsPage();
+    ContactUsPage contactUsPage = new ContactUsPage();
+    HeaderPage headerPage = new HeaderPage();
+    HomePage homePage = new HomePage();
+    String email = "bpoonamg@gmail.com";
+    String orderReference = "reference1";
+    String message = "this is a test from poonam";
 
     @Test
     public void tc002_verify_A_User_Is_Able_To_Send_A_Message_Through_Contact_Us_Form(){
-
         String expectedMessage = "Your message has been successfully sent to our team.";
-
         //click on the contact us link
         headerPage.clickOnContactUsLink();
         //select a subject heading - (2) Webmaster
-        contactUsPage.selectSubjectHeading(2);
+        contactUsPage.selectSubjectHeading(1);
         //enter email address in email input field
-        contactUsPage.enterEmailAddress("test@test.com");
+        contactUsPage.enterEmailAddress(email);
         //enter order reference in order reference input field
-        contactUsPage.enterOrderReference("1n3nm5tk");
+        contactUsPage.enterOrderReference(orderReference);
         //enter a message in message input box
-        contactUsPage.enterMessageText("This is a message.");
+        contactUsPage.enterMessageText(message);
+        //click on send button
+        contactUsPage.clickOnSendButton();
         //verify the success message as "Your message has been successfully sent to our team."
-        String actualMessage = contactUsPage.getSuccessMessage();
-        Assert.assertEquals(actualMessage,expectedMessage);
-
+        Assert.assertEquals(expectedMessage,contactUsPage.getSuccessMessage());
     }
 
     @Test
     public void tc003_verify_the_validation_error_message_when_a_mandatory_field_is_missing(){
-
         String expectedErrorMessage = "There is 1 error\nInvalid email address.";
 
         //click on the contact us link
@@ -43,21 +42,24 @@ public class VrutaTest extends BaseTest{
         //keep email address field empty - (no action needed)
         contactUsPage.enterEmailAddress(" ");
         //enter order reference in order reference input field
-        contactUsPage.enterOrderReference("some or");
+        contactUsPage.enterOrderReference(orderReference);
         //enter a message in message input box
-        contactUsPage.enterMessageText("Some message text");
+        contactUsPage.enterMessageText(message);
+        //click on send button
+        contactUsPage.clickOnSendButton();
         //verify the validation error message as "There is 1 error\n 1. Invalid email address."
-        String actualErrorMessage = contactUsPage.getErrorMessage();
-        Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
+        Assert.assertEquals(expectedErrorMessage,contactUsPage.getErrorMessage());
     }
 
     @Test
     public void tc004_verify_No_Of_Items_In_Search_Result(){
-
+        String text = "dress";
+       int expected = 7;
         //enter text in search input
-
+        headerPage.enterTextInSearchBox(text);
         //click on search button
+        headerPage.clickOnSearchButton();
         //verify the number of items returned as expected - 7
+        Assert.assertEquals(expected,homePage.getNoOfProductItems());
     }
-    
 }

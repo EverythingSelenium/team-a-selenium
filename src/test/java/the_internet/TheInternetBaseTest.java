@@ -1,16 +1,16 @@
-import automation_practice.BasePage;
+package the_internet;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseTest {
-
+public class TheInternetBaseTest {
     @BeforeMethod
     public void setup(){
-        BasePage.setup();
+        TheInternetBasePage.setup();
     }
 
     @AfterMethod
     public void teardown(){
-        BasePage.teardown();
+        TheInternetBasePage.teardown();
     }
 }

@@ -1,3 +1,5 @@
+package automation_practice;
+
 import org.testng.annotations.Test;
 
 public class TinuClass extends BaseTest{

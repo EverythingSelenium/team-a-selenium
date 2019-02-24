@@ -1,4 +1,5 @@
-import automation_practice.HeaderPage;
+package automation_practice;
+
 import org.testng.annotations.Test;
 
 public class VedantTest extends BaseTest{

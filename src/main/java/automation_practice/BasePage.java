@@ -17,7 +17,7 @@ public class BasePage {
         driver = new ChromeDriver();
 
         //open a url
-        driver.get("http://www.automation_practice.com");
+        driver.get("http://www.automationpractice.com");
 
         //maximize a window
         driver.manage().window().maximize();
@@ -35,41 +35,5 @@ public class BasePage {
     public void waitForInvisibilityOfAnElement(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
-    }
-
-    public void waitForElementToBeClickable(By by){
-        //write the code to wait for an element to be clickable
-    }
-
-    public void waitForPresenceOfElementLocated(){
-        //write the code to wait for an element to be present
-    }
-
-    public boolean isAnAlertPresent(){
-        try{
-            driver.switchTo().alert();
-            return true;
-        }
-        catch (Exception e){
-            return false;
-        }
-    }
-
-    public void acceptAnAlert(){
-        //write code to accept an alert
-    }
-
-    public void dismissAnAlert(){
-        //write code to dismiss an alert
-    }
-
-    public String getAlertMessage(){
-        String message = "";
-        //write code to get the message from alert text box
-        return message;
-    }
-
-    public void enterTextInAlert(){
-
     }
 }
