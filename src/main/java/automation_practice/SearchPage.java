@@ -1,4 +1,4 @@
-package automationpractice;
+package automation_practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

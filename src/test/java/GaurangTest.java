@@ -1,6 +1,6 @@
-import automationpractice.ContactUsPage;
-import automationpractice.HeaderPage;
-import automationpractice.SearchPage;
+import automation_practice.ContactUsPage;
+import automation_practice.HeaderPage;
+import automation_practice.SearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 /** Some of the methods in WebElement Interface
  *
+ *         WebElement element = driver.findElement(By.className("header"))
  *         element.clear();
  *         element.click();
  *         element.getText();

@@ -1,4 +1,4 @@
-package automationpractice;
+package automation_practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,6 +14,7 @@ public class ContactUsPage extends BasePage {
     private By sendButton = By.cssSelector("#submitMessage > span");
     private By successMessage = By.className("alert-success");
     private By errorMessage = By.className("alert-danger");
+    private By loadingBar = By.cssSelector("#loading:not([style='display: none;'])");
 
     //methods
     public void selectSubjectHeading(int option) {
@@ -53,6 +54,10 @@ public class ContactUsPage extends BasePage {
     }
     public String getMessageText(){
        return driver.findElement(messageInput).getText();
+    }
+
+    public void waitForLoadingBarToDisappear(){
+        waitForInvisibilityOfAnElement(loadingBar);
     }
 
 }
