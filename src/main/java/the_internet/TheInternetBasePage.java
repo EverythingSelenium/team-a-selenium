@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class TheInternetBasePage {
 
     static WebDriver driver;
@@ -15,6 +17,7 @@ public class TheInternetBasePage {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
         //Instantiate driver
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         //open a url
         driver.get("https://the-internet.herokuapp.com/");
@@ -43,6 +46,8 @@ public class TheInternetBasePage {
 
     public void waitForElementToBeClickable(By by){
         //write the code to wait for an element to be clickable
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
     public void waitForPresenceOfElementLocated(){
@@ -59,21 +64,19 @@ public class TheInternetBasePage {
         }
     }
 
-    public void acceptAnAlert(){
-        //write code to accept an alert
+    public void acceptAnAlert() {
+        driver.switchTo().alert().accept();
     }
 
-    public void dismissAnAlert(){
-        //write code to dismiss an alert
+    public void dismissAnAlert() {
+        driver.switchTo().alert().dismiss();
     }
 
-    public String getAlertMessage(){
-        String message = "";
-        //write code to get the message from alert text box
-        return message;
+    public String getAlertMessage() {
+        return driver.switchTo().alert().getText();
     }
 
-    public void enterTextInAlert(){
-
+    public void enterTextInAlert(String text) {
+        driver.switchTo().alert().sendKeys(text);
     }
 }
