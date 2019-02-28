@@ -40,7 +40,7 @@ public class TheInternetBasePage {
      * @param by
      */
     public void waitForInvisibilityOfAnElement(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
 
