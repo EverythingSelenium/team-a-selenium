@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Practice">
+    <test name="Automation Practice Tests">
+        <classes>
+            <class name="automation_practice.PrachiTest"></class>
+            <class name="automation_practice.PoonamTest"></class>
+            <class name="automation_practice.VrutaTest"></class>
+            <class name="automation_practice.TinuClass"></class>
+            <class name="automation_practice.TulsiTest"></class>
+            <class name="automation_practice.VedantTest"></class>
+        </classes>
+    </test>
+    <test name="The Internet">
+        <classes>
+            <class name="the_internet.TIGaurangTest"></class>
+            <class name="the_internet.TIPrachiTest"></class>
+        </classes>
+    </test>
+</suite>
