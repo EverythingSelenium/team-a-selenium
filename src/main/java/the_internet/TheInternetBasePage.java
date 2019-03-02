@@ -1,11 +1,13 @@
 package the_internet;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class TheInternetBasePage {
@@ -78,5 +80,55 @@ public class TheInternetBasePage {
 
     public void enterTextInAlert(String text) {
         driver.switchTo().alert().sendKeys(text);
+    }
+
+    public void testJavaScriptExecutor(int pixels) {
+        WebElement element = driver.findElement(By.cssSelector(""));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //click on an element
+        js.executeScript("arguments[0].click();", element);
+
+        //scroll into view
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+        //Enter text using java script
+        js.executeScript("document.getElementById('some_id').value='someValue';");
+        js.executeScript("document.getElementById('Email').value='SoftwareTestingMaterial.com';");
+
+
+        //Vertical scroll - down by 500  pixels
+        js.executeScript("window.scrollBy(0,"+pixels+")");
+
+        // for scrolling till the bottom of the page we can use the code like
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+
+    public void clickOnAnElement(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void clickOnAnElement(By by){
+
+        WebElement element = driver.findElement(by);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void takeScreenshot(){
+        //Generate a string using current time in millis
+        String fileName = String.valueOf(System.currentTimeMillis()/1000);
+
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+
+        File imgFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(imgFile,new File("target/screenshots/" + fileName + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

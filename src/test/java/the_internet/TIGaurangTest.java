@@ -80,6 +80,7 @@ public class TIGaurangTest extends TheInternetBaseTest {
         Assert.assertEquals(hoversPage.getUserName(),"name: user2");
 
         hoversPage.hoverOverAFigure(3);
+        hoversPage.takeScreenshot();
         Assert.assertEquals(hoversPage.getUserName(),"name: user3");
     }
 }

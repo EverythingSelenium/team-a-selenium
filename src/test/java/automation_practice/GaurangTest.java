@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Some of the method in WebDriver Interface
@@ -39,6 +40,7 @@ public class GaurangTest extends BaseTest {
     private HeaderPage headerPage = new HeaderPage();
     private SearchPage searchPage = new SearchPage();
     private ContactUsPage contactUsPage = new ContactUsPage();
+    private HomePage homePage = new HomePage();
 
     @Test
     public void tc001_verifySearchResultText() {
@@ -114,6 +116,11 @@ public class GaurangTest extends BaseTest {
     
     @Test
      public void arrayListTest(){
+
+        String s = "selenium tests are running smoothly";
+        String[] words = s.split(" ");
+        System.out.println("words.length = " + words.length);
+
         ArrayList<String> stringArrayList = new ArrayList<>();
         stringArrayList.add("Chicago");
         stringArrayList.add("Dallas");
@@ -122,8 +129,19 @@ public class GaurangTest extends BaseTest {
         stringArrayList.add("Streamwood");
         stringArrayList.add("Schaumburg");
 
+        List<String> stringList = new ArrayList<>();
+
+
         System.out.println("stringArrayList.size() = " + stringArrayList.size());
         System.out.println("stringArrayList.indexOf(\"New york\") = " + stringArrayList.indexOf("New york"));
         System.out.println("stringArrayList.get(3) = " + stringArrayList.get(3));
+    }
+
+    @Test
+    public void verifyItemDescriptions(){
+        List<String> items = homePage.getItemDesc();
+        for(String item:items){
+            System.out.println("item = " + item);
+        }
     }
 }
