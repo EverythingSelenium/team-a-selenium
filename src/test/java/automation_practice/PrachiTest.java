@@ -65,12 +65,5 @@ public class PrachiTest extends BaseTest{
         String actualResultMessage = searchpage.getResultMessage();
         Assert.assertEquals(actualResultMessage,expectedResultMessage);
 
-
-        //make change
-        //verify change in github desktop
-        //git add --all
-        //git commit -m "commit message..."
-        //git push origin vruta-test
-
     }
 }

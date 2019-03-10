@@ -3,27 +3,56 @@ package the_internet;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class TheInternetBasePage {
 
     static WebDriver driver;
 
-    public static void setup() {
+    public static void setup(){
         //Set the path for the chrome driver executable
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
         //Instantiate driver
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
         //open a url
         driver.get("https://the-internet.herokuapp.com/");
+        //maximize a window
+        driver.manage().window().maximize();
+    }
 
+    public void setupWithGrid(){
+        String remoteURL = "http://localhost:4444/wd/hub";
+        //Set the path for the chrome driver executable
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        //options.addArguments("--incognito");
+        //options.addArguments("--show-fps-counter");
+
+        URL url = null;
+        try {
+            url = new URL(remoteURL);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        driver = new RemoteWebDriver(url, options);
+
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //open a url
+        driver.get("https://the-internet.herokuapp.com/");
         //maximize a window
         driver.manage().window().maximize();
     }
@@ -97,7 +126,6 @@ public class TheInternetBasePage {
         js.executeScript("document.getElementById('some_id').value='someValue';");
         js.executeScript("document.getElementById('Email').value='SoftwareTestingMaterial.com';");
 
-
         //Vertical scroll - down by 500  pixels
         js.executeScript("window.scrollBy(0,"+pixels+")");
 
@@ -120,7 +148,6 @@ public class TheInternetBasePage {
     public void takeScreenshot(){
         //Generate a string using current time in millis
         String fileName = String.valueOf(System.currentTimeMillis()/1000);
-
         TakesScreenshot screenshot = (TakesScreenshot) driver;
 
         File imgFile = screenshot.getScreenshotAs(OutputType.FILE);

@@ -49,7 +49,7 @@ public class TIGaurangTest extends TheInternetBaseTest {
     }
 
     @Test
-    public void tc002_verifyJSPrompt(){
+    public void tc003_verifyJSPrompt(){
 
         String message = "This is test text for an alert";
         //click on JavaScript Alerts link
@@ -62,12 +62,13 @@ public class TIGaurangTest extends TheInternetBaseTest {
         javascriptAlertPage.enterTextInAlert(message);
         //click ok
         javascriptAlertPage.acceptAnAlert();
+        javascriptAlertPage.takeScreenshot();
         //verify the result text
         Assert.assertEquals(javascriptAlertPage.getResultText(),"You entered: " + message );
     }
 
     @Test
-    public void tc003_verifyHoverOver(){
+    public void tc004_verifyHoverOver(){
 
         //click on Hovers Alerts link
         hoversPage.clickOnLinkOnHomePage("Hovers");
