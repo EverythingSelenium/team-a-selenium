@@ -70,7 +70,7 @@ public class GaurangTest extends BaseTest {
         headerPage.clickOnContactUsLink();
         //select a subject heading - (2) Webmaster
         contactUsPage.selectSubjectHeading(2);
-        //enter email address in email input field
+        //enter email address in email input field as test@test.com
         contactUsPage.enterEmailAddress("test@test.com");
         //enter order reference in order reference input field
         contactUsPage.enterOrderReference("1n3nm5tk");
