@@ -60,4 +60,5 @@ public class ContactUsPage extends BasePage {
         waitForInvisibilityOfAnElement(loadingBar);
     }
 
+
 }
