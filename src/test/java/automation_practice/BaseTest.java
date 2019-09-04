@@ -12,6 +12,6 @@ public class BaseTest {
 
     @AfterMethod
     public void teardown(){
-//        BasePage.teardown();
+        BasePage.teardown();
     }
 }
