@@ -62,4 +62,5 @@ public class PoonamTest extends BaseTest {
         //verify the number of items returned as expected - 7
         Assert.assertEquals(expected,homePage.getNoOfProductItems());
     }
+
 }

@@ -21,13 +21,13 @@ public class HomePage extends BasePage{
     }
 
     public List<String> getItemDesc(){
-        List<String> itemDescs = new ArrayList<>();
+        List<String> itemsDesc = new ArrayList<>();
         List<WebElement> elements = driver.findElements(productItems);
         for(WebElement element: elements){
             String elementText = element.getText();
-            itemDescs.add(elementText);
+            itemsDesc.add(elementText);
         }
-        return itemDescs;
+        return itemsDesc;
     }
 
     public void selectSortByOptions(int option)  {

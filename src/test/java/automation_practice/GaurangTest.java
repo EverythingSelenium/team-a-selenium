@@ -139,6 +139,7 @@ public class GaurangTest extends BaseTest {
 
     @Test
     public void verifyItemDescriptions(){
+
         List<String> items = homePage.getItemDesc();
         for(String item:items){
             System.out.println("item = " + item);
