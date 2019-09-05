@@ -1,4 +1,0 @@
-[0826/112908.999:ERROR:file_io_win.cc(170)] CreateFile C:\Users\gaura\AppData\Local\Temp\scoped_dir57072_23012\Crashpad\reports\8c4cafcd-52fa-40e8-b115-aabb2dbfbfcf.dmp: The system cannot find the path specified. (0x3)
-[0826/112909.004:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
-[0826/112922.054:ERROR:file_io_win.cc(170)] CreateFile C:\Users\gaura\AppData\Local\Temp\scoped_dir36976_26468\Crashpad\reports\dd82e26a-4566-4d07-a725-542098f9225a.dmp: The system cannot find the path specified. (0x3)
-[0826/112922.055:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
