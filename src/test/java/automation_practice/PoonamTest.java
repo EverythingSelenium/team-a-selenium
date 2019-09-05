@@ -20,7 +20,7 @@ public class PoonamTest extends BaseTest {
         //select a subject heading - (2) Webmaster
         contactUsPage.selectSubjectHeading(1);
         //enter email address in email input field
-        contactUsPage.enterEmailAddress(email);
+        contactUsPage.                                                                                                                                                          enterEmailAddress(email);
         //enter order reference in order reference input field
         contactUsPage.enterOrderReference(orderReference);
         //enter a message in message input box
