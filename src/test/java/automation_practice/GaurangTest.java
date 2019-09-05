@@ -145,16 +145,4 @@ public class GaurangTest extends BaseTest {
             System.out.println("item = " + item);
         }
     }
-    @Test
-    public void verifyArryListTest1(){
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Krish");
-        arrayList.add("Kush");
-        arrayList.add("poonam");
-        arrayList.add("gaurang");
-        System.out.println(arrayList.size());
-        System.out.println(arrayList.indexOf("Kush"));
-        System.out.println(arrayList.get(2));
-
-    }
 }
