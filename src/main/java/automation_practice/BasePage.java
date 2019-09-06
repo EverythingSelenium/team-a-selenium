@@ -21,6 +21,7 @@ public class BasePage {
 
         //maximize a window
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
     }
 
     public static void teardown() {

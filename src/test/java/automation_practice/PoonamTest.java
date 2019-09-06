@@ -8,6 +8,9 @@ public class PoonamTest extends BaseTest {
     ContactUsPage contactUsPage = new ContactUsPage();
     HeaderPage headerPage = new HeaderPage();
     HomePage homePage = new HomePage();
+    SignInPage signInPage = new SignInPage();
+    WomenHoverPage womenHoverPage = new WomenHoverPage();
+
     String email = "bpoonamg@gmail.com";
     String orderReference = "reference1";
     String message = "this is a test from poonam";
@@ -61,6 +64,29 @@ public class PoonamTest extends BaseTest {
         headerPage.clickOnSearchButton();
         //verify the number of items returned as expected - 7
         Assert.assertEquals(expected,homePage.getNoOfProductItems());
+    }
+    @Test
+    public void tc005_verify_user_is_able_to_signIn_successfully(){
+        String email = "bpoonamg@gmail.com";
+        String password = "bpoonamg";
+        // click on sign in link
+        signInPage.clickOnSignInButton();
+        //enter email address
+        signInPage.enterEmailAddress(email);
+        //enter password
+        signInPage.enterPassWord(password);
+        //click on sign in button
+        signInPage.clickOnSignIn1();
+        //verify sign in
+        String expectedResult = "poonam b";
+       String actualResult = signInPage.getSignInVerify();
+       Assert.assertEquals(actualResult,expectedResult);
+
+    }
+    @Test
+    public void tc_006_verify_women_Hover(){
+        womenHoverPage.hoverWomen();
+
     }
 
 }

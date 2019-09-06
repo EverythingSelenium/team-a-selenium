@@ -23,7 +23,6 @@ public class SignInTest extends WalmartBaseTest {
         signIn.clickOnSignInButton();
 
         //verify user is able to sigh in successfully
-        signIn.getSingINPB();
         System.out.println(signIn.getSingINPB());
 
 

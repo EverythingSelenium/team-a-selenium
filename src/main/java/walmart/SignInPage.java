@@ -10,10 +10,6 @@ public class SignInPage extends WalmartBasePage {
     private By signInButton = By.cssSelector("#sign-in-form button.button.m-margin-top");
     private By signPB = By.cssSelector("span[data-tl-id=GlobalHeaderBubblesNav-Account-Initials]");
 
-
-
-
-
     public void clickOnAccountButton(){
         driver.findElement(accountButton).click();
     }
