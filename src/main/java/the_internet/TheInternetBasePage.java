@@ -67,9 +67,9 @@ public class TheInternetBasePage {
     }
 
     /**
-     * This method waits for an element to become invisible.
+
      * @param by
-     */
+     */ //    * This method waits for an element to become invisible.
     public void waitForInvisibilityOfAnElement(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
@@ -80,6 +80,13 @@ public class TheInternetBasePage {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(by));
     }
+    public void waitForElement( By by){
+
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+
+    }
+
 
     public void waitForPresenceOfElementLocated(){
         //write the code to wait for an element to be present
@@ -122,15 +129,28 @@ public class TheInternetBasePage {
         //scroll into view
         js.executeScript("arguments[0].scrollIntoView(true);", element);
 
+
         //Enter text using java script
-        js.executeScript("document.getElementById('some_id').value='someValue';");
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight);");
         js.executeScript("document.getElementById('Email').value='SoftwareTestingMaterial.com';");
 
         //Vertical scroll - down by 500  pixels
-        js.executeScript("window.scrollBy(0,"+pixels+")");
+        js.executeScript("window.scrollBy(0,500)");
 
         // for scrolling till the bottom of the page we can use the code like
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+    public void enterTextJs(String id, String textValue){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('" + id + "').value='" + textValue + "';");
+    }
+    public void clickOnAnElementJs(String element ){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click" + element );
+    }
+    public void verticalScrollDownJs(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
     }
 
     public void clickOnAnElement(WebElement element){

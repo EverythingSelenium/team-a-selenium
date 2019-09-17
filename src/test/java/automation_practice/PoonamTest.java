@@ -84,9 +84,13 @@ public class PoonamTest extends BaseTest {
 
     }
     @Test
-    public void tc_006_verify_women_Hover(){
-        womenHoverPage.hoverWomen();
+    public void tc_006_verify_women_Hover() throws InterruptedException {
+        womenHoverPage.getAllDivs();
+
+//        womenHoverPage.hoverWomen();
+//        Thread.sleep(5000);
 
     }
+
 
 }

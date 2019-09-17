@@ -3,6 +3,7 @@ package automation_practice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.support.ui.Select;
@@ -26,7 +27,10 @@ public class HomePage extends BasePage{
         for(WebElement element: elements){
             String elementText = element.getText();
             itemsDesc.add(elementText);
+
         }
+
+
         return itemsDesc;
     }
 

@@ -26,6 +26,7 @@ public class ContactUsPage extends BasePage {
     public void enterEmailAddress(String email) {
         WebElement emailAddressElement = driver.findElement(emailAddressInput);
         emailAddressElement.sendKeys(email);
+
     }
 
     public void enterOrderReference(String order) {
