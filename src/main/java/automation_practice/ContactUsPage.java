@@ -37,6 +37,7 @@ public class ContactUsPage extends BasePage {
     public void enterMessageText(String message){
         WebElement messageElement = driver.findElement(messageInput);
         messageElement.sendKeys(message);
+
     }
 
     public void clickOnSendButton(){
@@ -61,5 +62,10 @@ public class ContactUsPage extends BasePage {
         waitForInvisibilityOfAnElement(loadingBar);
     }
 
+    public void pp(){
+        String title = driver.getTitle();
+        System.out.println("title = " + title);
+        System.out.println(driver.getCurrentUrl());
 
+    }
 }

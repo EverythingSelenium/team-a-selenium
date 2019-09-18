@@ -9,13 +9,21 @@ public class AmazonPage extends AmazonBasePage {
     By searchButton = By.cssSelector("span#nav-search-submit-text");
 
     public void enterTextInSearchInputBox(String text){
-        WebElement element = searchInputBox.findElement(driver);
+        WebElement element = driver.findElement(searchInputBox);
         element.sendKeys(text);
     }
     public void clickOnSearchButton(){
         WebElement element = driver.findElement(searchButton);
         element.click();
     }
+    public void practiceDriver(){
+//       String currentURL =  driver.getCurrentUrl();
+//        System.out.println(currentURL);
+        String title = driver.getTitle();
+        System.out.println(title);
+
+    }
+
 
 
 

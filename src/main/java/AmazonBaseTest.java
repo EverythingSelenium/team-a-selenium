@@ -4,12 +4,14 @@ import org.testng.annotations.Test;
 
 public class AmazonBaseTest {
     AmazonBasePage amazonPage = new AmazonBasePage();
+
     @BeforeMethod
-    public void verifySetup(){
+    public void verifySetup() {
         amazonPage.setProperty();
     }
+
     @AfterMethod
-    public void verifyQuit(){
+    public void verifyQuit() {
         amazonPage.tearDown();
 
     }

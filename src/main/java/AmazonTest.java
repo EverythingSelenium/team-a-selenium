@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-    @Test
+
     public class AmazonTest extends AmazonBaseTest {
     //navigate to amazon.com
     AmazonPage amazonPage = new AmazonPage();
@@ -10,9 +10,11 @@ import org.testng.annotations.Test;
 
     @Test
     public void verifySearchText() {
-        amazonPage.enterTextInSearchInputBox("scooter");
+        amazonPage.enterTextInSearchInputBox(text);
         amazonPage.clickOnSearchButton();
     }
+
+
     //select scooter
 
 }
