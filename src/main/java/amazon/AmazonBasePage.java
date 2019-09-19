@@ -1,10 +1,12 @@
+package amazon;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AmazonBasePage {
-    public WebDriver driver;
+    public static WebDriver driver;
 
-    public void setProperty(){
+    public static void setProperty(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
 
         driver = new ChromeDriver();
@@ -14,7 +16,7 @@ public class AmazonBasePage {
 
     }
 
-    public void tearDown(){
+    public static void tearDown(){
        if(driver != null){
            driver.quit();
        }

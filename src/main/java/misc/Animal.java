@@ -1,3 +1,5 @@
+package misc;
+
 import java.sql.SQLOutput;
 
 public class Animal {

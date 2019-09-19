@@ -1,8 +1,7 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+package amazon;
 
-import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class AmazonPage extends AmazonBasePage {
     By searchInputBox = By.cssSelector("input#twotabsearchtextbox");

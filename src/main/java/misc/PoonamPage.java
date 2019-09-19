@@ -1,3 +1,5 @@
+package misc;
+
 import com.sun.javafx.collections.MappingChange;
 
 import java.util.ArrayList;

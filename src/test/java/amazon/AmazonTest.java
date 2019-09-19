@@ -1,8 +1,9 @@
-import org.openqa.selenium.By;
+package amazon;
+
 import org.testng.annotations.Test;
 
 
-    public class AmazonTest extends AmazonBaseTest {
+public class AmazonTest extends AmazonBaseTest {
     //navigate to amazon.com
     AmazonPage amazonPage = new AmazonPage();
     //search for kids scooter

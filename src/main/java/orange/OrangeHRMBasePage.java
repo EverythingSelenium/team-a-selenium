@@ -1,3 +1,5 @@
+package orange;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -5,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class OrangeHRMBasePage {
 
 
-    WebDriver driver;
+    static WebDriver driver;
 
-    public void setProperty(){
+    public static void setProperty(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
         driver = new ChromeDriver();
@@ -15,7 +17,8 @@ public class OrangeHRMBasePage {
         driver.get("https://poonamb-trials653.orangehrmlive.com");
         driver.manage().window().maximize();
     }
-    public void tearDown(){
+
+    public static void tearDown(){
         if(driver != null){
             driver.quit();
         }

@@ -1,6 +1,7 @@
+package misc;
+
 import org.testng.annotations.Test;
 
-import javax.jws.Oneway;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
