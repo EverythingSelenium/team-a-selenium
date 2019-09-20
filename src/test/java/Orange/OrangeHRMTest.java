@@ -23,10 +23,10 @@ public class OrangeHRMTest extends OrangeHRMBaseTest {
 
     @Test
     public void verifyDocumentList() {
-        ArrayList<String> expectedList = new ArrayList();
+        List<String> expectedList = new ArrayList<>();
         expectedList.add("Workplace Security");
         expectedList.add("Social Engineering");
-        expectedList.add("Salary Information");
+        expectedList.add("Salary Information (Compensation & Classification)");
         expectedList.add("Health Insurance in the United States");
         expectedList.add("Paid Parental Leave in the United States");
         expectedList.add("Measurable Customer Service Standards");
@@ -35,19 +35,58 @@ public class OrangeHRMTest extends OrangeHRMBaseTest {
         expectedList.add("Global Company Meeting");
         expectedList.add("Goals and Strategies");
         expectedList.add("Truth in Accounting");
-        expectedList.add("Health & Safety Guideliness");
+        expectedList.add("Health & Safety Guidelines");
 
-
-        orangeHRMPage.enterLoginName(loginName);
-        orangeHRMPage.enterPassword(password);
-        orangeHRMPage.clickOnLogin();
-        orangeHRMPage.clickOnDashbord();
+        orangeHRMPage.login(loginName,password);
+        orangeHRMPage.clickOnDashboard();
         List<String> actualList = orangeHRMPage.documentLists();
-        boolean flag;
-        if (actualList.containsAll(expectedList)) flag = true;
-        else flag = false;
 
-        if (flag = true) System.out.println("test pass");
+//        Assert.assertEquals(expectedList, actualList);
+
+        int index = 0;
+        for (String docTitle : actualList) {
+            Assert.assertEquals(expectedList.get(index), docTitle);
+            index++;
+        }
+
+    }
+    @Test
+    public void verify_Alice_Menu_List(){
+
+        List<String>expectedMenuList = new ArrayList<>();
+
+        expectedMenuList.add("PIM");
+        expectedMenuList.add("My Info");
+        expectedMenuList.add("Leave");
+        expectedMenuList.add("Time");
+        expectedMenuList.add("Training");
+        expectedMenuList.add("Performance");
+        expectedMenuList.add("Expense");
+        expectedMenuList.add("More");
+        expectedMenuList.add("Announcements");
+        expectedMenuList.add("Dashboard");
+        expectedMenuList.add("Buzz");
+        expectedMenuList.add("Directory");
+        expectedMenuList.add("Organization Chart");
+        expectedMenuList.add("Preferences");
+        expectedMenuList.add("Assets");
+
+
+        orangeHRMPage.login("alice","Abcd1234");
+        List<String> actualResult = orangeHRMPage.getAlice_menu_list();
+
+//        Assert.assertEquals(actualResult,expectedMenuList);
+//        System.out.println("actual" + actualResult);
+//        System.out.println("expected" + expectedMenuList);
+
+    }
+    @Test
+    public void verifyIsDisplayed(){
+        orangeHRMPage.login(loginName,password);
+        orangeHRMPage.IsPresented();
+
+
+
     }
 
 }
