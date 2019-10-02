@@ -16,11 +16,11 @@ public class OrangeHRMPage extends OrangeHRMBasePage {
     private By passWordField = By.cssSelector("input#txtPassword");
     private By myInfoLink = By.cssSelector("li.level1.my_info.active span:nth-child(2)");
     private By spinner = By.cssSelector("div.loading");
-    private By moreMenu = By.cssSelector("a.collapsible-header.waves-effect.waves-orange.active span.left-menu-title");
+    private By moreMenu = By.cssSelector("#menu_news_More");
     private By dashboard = By.xpath("//li[@class='level2 current active']/a/span[@class='left-menu-title']");
     private By documentLists = By.cssSelector("ul#documentList>li>div.truncate a");
     private By aliceMenuLocator = By.cssSelector("div#menu-content>ul>li");
-    private By activeClass = By.cssSelector("li.level1.admin.no-padding.parent.active");
+    private By expanded = By.cssSelector("#menu_news_More.current.active");
 
 
     public void enterLoginName(String loginName) {
@@ -38,7 +38,7 @@ public class OrangeHRMPage extends OrangeHRMBasePage {
 
     }
 
-    public void login(String userName, String password){
+    public void login(String userName, String password) {
         enterLoginName(userName);
         enterPassword(password);
         clickOnLogin();
@@ -60,6 +60,9 @@ public class OrangeHRMPage extends OrangeHRMBasePage {
     }
 
     public void clickOnDashboard() {
+        if(driver.findElements(expanded).size() == 0) {
+            driver.findElement(moreMenu).click();
+        }
         driver.findElement(dashboard).click();
     }
 
@@ -74,25 +77,17 @@ public class OrangeHRMPage extends OrangeHRMBasePage {
         return docList;
     }
 
-    public List<String>getAlice_menu_list(){
+    public List<String> getAlice_menu_list() {
         List<WebElement> webElements = driver.findElements(aliceMenuLocator);
         List<String> actualAlicMenuList = new ArrayList<>();
 
-        for(WebElement element:webElements){
+        for (WebElement element : webElements) {
             String actualList = element.getText();
             actualAlicMenuList.add(actualList);
         }
         return actualAlicMenuList;
 
     }
-    public void IsPresented(){
-       boolean b = driver.findElement(activeClass).isDisplayed();
-       if(b =false){
-           driver.findElement(activeClass).click();
-       }
-
-    }
-
 
 
 }

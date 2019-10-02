@@ -41,7 +41,7 @@ public class OrangeHRMTest extends OrangeHRMBaseTest {
         orangeHRMPage.clickOnDashboard();
         List<String> actualList = orangeHRMPage.documentLists();
 
-//        Assert.assertEquals(expectedList, actualList);
+        //Assert.assertEquals(expectedList, actualList);
 
         int index = 0;
         for (String docTitle : actualList) {
@@ -62,30 +62,22 @@ public class OrangeHRMTest extends OrangeHRMBaseTest {
         expectedMenuList.add("Training");
         expectedMenuList.add("Performance");
         expectedMenuList.add("Expense");
-        expectedMenuList.add("More");
-        expectedMenuList.add("Announcements");
-        expectedMenuList.add("Dashboard");
-        expectedMenuList.add("Buzz");
-        expectedMenuList.add("Directory");
-        expectedMenuList.add("Organization Chart");
-        expectedMenuList.add("Preferences");
-        expectedMenuList.add("Assets");
+        expectedMenuList.add("More\n" +
+                "Announcements\n" +
+                "Dashboard\n" +
+                "Buzz\n" +
+                "Directory\n" +
+                "Organization Chart\n" +
+                "Preferences\n" +
+                "Assets");
 
 
         orangeHRMPage.login("alice","Abcd1234");
         List<String> actualResult = orangeHRMPage.getAlice_menu_list();
 
-//        Assert.assertEquals(actualResult,expectedMenuList);
+        Assert.assertEquals(actualResult,expectedMenuList);
 //        System.out.println("actual" + actualResult);
 //        System.out.println("expected" + expectedMenuList);
-
-    }
-    @Test
-    public void verifyIsDisplayed(){
-        orangeHRMPage.login(loginName,password);
-        orangeHRMPage.IsPresented();
-
-
 
     }
 

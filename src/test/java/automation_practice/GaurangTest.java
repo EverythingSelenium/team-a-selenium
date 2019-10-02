@@ -1,9 +1,11 @@
 package automation_practice;
 
+import javafx.print.Collation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -128,6 +130,10 @@ public class GaurangTest extends BaseTest {
         stringArrayList.add("Bartlett");
         stringArrayList.add("Streamwood");
         stringArrayList.add("Schaumburg");
+        Collections.sort(stringArrayList);
+        System.out.println("after sorting" + stringArrayList);
+
+
 
         List<String> stringList = new ArrayList<>();
 

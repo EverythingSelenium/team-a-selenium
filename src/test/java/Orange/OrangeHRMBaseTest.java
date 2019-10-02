@@ -8,7 +8,7 @@ public class OrangeHRMBaseTest  {
 
     @BeforeMethod
     public void verifySetProperty(){
-        OrangeHRMBasePage.setProperty();
+        OrangeHRMBasePage.setProperty("chrome", "https://poonamb-trials653.orangehrmlive.com");
     }
     @AfterMethod
     public void teardown(){

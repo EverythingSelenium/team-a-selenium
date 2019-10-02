@@ -9,12 +9,14 @@ public class OrangeHRMBasePage {
 
     static WebDriver driver;
 
-    public static void setProperty(){
+    public static void setProperty(String browser, String app){
+        if(browser.equalsIgnoreCase("chrome")) {
 
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
-        driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win_2-42.exe");
+            driver = new ChromeDriver();
+        }
 
-        driver.get("https://poonamb-trials653.orangehrmlive.com");
+        driver.get(app);
         driver.manage().window().maximize();
     }
 

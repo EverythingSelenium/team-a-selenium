@@ -15,13 +15,7 @@ public class AmazonPage extends AmazonBasePage {
         WebElement element = driver.findElement(searchButton);
         element.click();
     }
-    public void practiceDriver(){
-//       String currentURL =  driver.getCurrentUrl();
-//        System.out.println(currentURL);
-        String title = driver.getTitle();
-        System.out.println(title);
 
-    }
 
 
 

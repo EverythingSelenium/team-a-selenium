@@ -1,5 +1,8 @@
 package automation_practice;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -96,6 +99,52 @@ public class PoonamTest extends BaseTest {
         contactUsPage.pp();
 
     }
+    @Test
+    public void verifyHomeIcon(){
+        String expectedURL = "http://automationpractice.com/index.php";
+        headerPage.clickOnContactUsLink();
+        contactUsPage.clickOnHomeButton();
+
+        String actualUrl = contactUsPage.getUrl();
+        Assert.assertEquals(actualUrl,expectedURL);
+    }
+    @Test
+    public void verifyPaymentSuccessfullyDone(){
+        signInPage.signIn(email,"bpoonamg");
+
+
+    }
+    @Test
+    public void javascriptGetTitleVerify(){
+        System.out.println(contactUsPage.javascriptGetTitle());
+    }
+
+    @Test
+    public void verifySearchButton(){
+//        contactUsPage.clickOnElement();
+    }
+
+    @Test
+    public void verifyScrollDown(){
+        contactUsPage.scrollDown();
+
+    }
+    @Test
+    public void verifyScrollInToView(){
+
+        contactUsPage.scrollInToView();
+    }
+    @Test
+    public void verifyScrollDownToEnd(){
+        contactUsPage.scrollDownToEnd();
+    }
+    @Test
+    public void verifyGenerateAlert(){
+        contactUsPage.generateAlert();
+    }
+
+
+
 
 
 }
