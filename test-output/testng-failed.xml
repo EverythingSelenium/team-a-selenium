@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Test]" parallel="methods">
+  <test thread-count="3" name="orange(failed)" parallel="methods">
+    <classes>
+      <class name="Orange.OrangeHRMTest">
+        <methods>
+          <include name="verifySetProperty"/>
+          <include name="verify_Alice_Menu_List"/>
+          <include name="teardown"/>
+          <include name="verifyDocumentList"/>
+        </methods>
+      </class> <!-- Orange.OrangeHRMTest -->
+    </classes>
+  </test> <!-- orange(failed) -->
+</suite> <!-- Failed suite [Test] -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Automation Practice]">
+  <test thread-count="5" name="The Internet(failed)">
+    <classes>
+      <class name="the_internet.TIGaurangTest">
+        <methods>
+          <include name="tc_007_verify_Hover"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- the_internet.TIGaurangTest -->
+    </classes>
+  </test> <!-- The Internet(failed) -->
+</suite> <!-- Failed suite [Automation Practice] -->

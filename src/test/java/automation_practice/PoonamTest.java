@@ -1,5 +1,8 @@
 package automation_practice;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,6 +11,9 @@ public class PoonamTest extends BaseTest {
     ContactUsPage contactUsPage = new ContactUsPage();
     HeaderPage headerPage = new HeaderPage();
     HomePage homePage = new HomePage();
+    SignInPage signInPage = new SignInPage();
+    WomenHoverPage womenHoverPage = new WomenHoverPage();
+
     String email = "bpoonamg@gmail.com";
     String orderReference = "reference1";
     String message = "this is a test from poonam";
@@ -20,7 +26,7 @@ public class PoonamTest extends BaseTest {
         //select a subject heading - (2) Webmaster
         contactUsPage.selectSubjectHeading(1);
         //enter email address in email input field
-        contactUsPage.enterEmailAddress(email);
+        contactUsPage.                                                                                                                                                          enterEmailAddress(email);
         //enter order reference in order reference input field
         contactUsPage.enterOrderReference(orderReference);
         //enter a message in message input box
@@ -62,5 +68,83 @@ public class PoonamTest extends BaseTest {
         //verify the number of items returned as expected - 7
         Assert.assertEquals(expected,homePage.getNoOfProductItems());
     }
+    @Test
+    public void tc005_verify_user_is_able_to_signIn_successfully(){
+        String email = "bpoonamg@gmail.com";
+        String password = "bpoonamg";
+        // click on sign in link
+        signInPage.clickOnSignInButton();
+        //enter email address
+        signInPage.enterEmailAddress(email);
+        //enter password
+        signInPage.enterPassWord(password);
+        //click on sign in button
+        signInPage.clickOnSignIn1();
+        //verify sign in
+        String expectedResult = "poonam b";
+       String actualResult = signInPage.getSignInVerify();
+       Assert.assertEquals(actualResult,expectedResult);
+
+    }
+    @Test
+    public void tc_006_verify_women_Hover() throws InterruptedException {
+        womenHoverPage.getAllDivs();
+
+//        womenHoverPage.hoverWomen();
+//        Thread.sleep(5000);
+
+    }
+    @Test
+    public void pp1(){
+        contactUsPage.pp();
+
+    }
+    @Test
+    public void verifyHomeIcon(){
+        String expectedURL = "http://automationpractice.com/index.php";
+        headerPage.clickOnContactUsLink();
+        contactUsPage.clickOnHomeButton();
+
+        String actualUrl = contactUsPage.getUrl();
+        Assert.assertEquals(actualUrl,expectedURL);
+    }
+    @Test
+    public void verifyPaymentSuccessfullyDone(){
+        signInPage.signIn(email,"bpoonamg");
+
+
+    }
+    @Test
+    public void javascriptGetTitleVerify(){
+        System.out.println(contactUsPage.javascriptGetTitle());
+    }
+
+    @Test
+    public void verifySearchButton(){
+//        contactUsPage.clickOnElement();
+    }
+
+    @Test
+    public void verifyScrollDown(){
+        contactUsPage.scrollDown();
+
+    }
+    @Test
+    public void verifyScrollInToView(){
+
+        contactUsPage.scrollInToView();
+    }
+    @Test
+    public void verifyScrollDownToEnd(){
+        contactUsPage.scrollDownToEnd();
+    }
+    @Test
+    public void verifyGenerateAlert(){
+        contactUsPage.generateAlert();
+    }
+
+
+
+
 
 }

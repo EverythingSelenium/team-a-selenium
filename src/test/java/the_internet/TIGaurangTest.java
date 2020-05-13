@@ -84,4 +84,11 @@ public class TIGaurangTest extends TheInternetBaseTest {
         hoversPage.takeScreenshot();
         Assert.assertEquals(hoversPage.getUserName(),"name: user3");
     }
+    @Test
+    public void tc_007_verify_Hover(){
+        hoversPage.clickOnHovers();
+        hoversPage.clickOnImag1();
+        hoversPage.getText();
+    }
+
 }
